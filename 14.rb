@@ -1,5 +1,3 @@
-require 'pry'
-
 # https://leetcode.com/problems/longest-common-prefix/
 def longest_common_prefix(strs)
   return "" if strs.length == 0
@@ -17,4 +15,3 @@ def longest_common_prefix(strs)
   end
   r >= 0 && strs.all?{|str| str[min_str[0..r]]} ? min_str[0..r] : ""
 end
-
