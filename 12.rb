@@ -13,5 +13,3 @@ def int_to_roman(num)
   end
   roman_str
 end
-
-puts int_to_roman 1004
