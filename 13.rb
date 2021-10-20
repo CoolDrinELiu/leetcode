@@ -13,8 +13,11 @@ def roman_to_int s
     total = 0
   s.each_char do |current_char|
     if roman_dic[current_char] > roman_dic[prev_char]
+      # Solution 1
       total = total - roman_dic[prev_char]
       total = total + (roman_dic[current_char] - roman_dic[prev_char])
+      # Solution 2 (same)
+      # total = total - 2 * roman_dic[prev_char] + roman_dic[current_char]
     else
       total = total + roman_dic[current_char]
     end
