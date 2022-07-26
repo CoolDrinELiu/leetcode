@@ -36,6 +36,7 @@ def find_substring(s, words)
   words_num = words.length
   word_tally = Hash.new(0)
   words.each { |w| word_tally[w] += 1 }
+  binding.pry
   (0..(s.length - word_len * words_num)).select do |i|
     counter = Hash.new(0)
     (0...words_num).all? do |j|
@@ -45,3 +46,10 @@ def find_substring(s, words)
     end
   end
 end
+
+# Input: s = "barfoothefoobarman", words = ["foo","bar"]
+# Output: [0,9]
+# Explanation: Substrings starting at index 0 and 9 are "barfoo" and "foobar" respectively.
+# The output order does not matter, returning [9,0] is fine too.
+
+puts find_substring "barfoothefoobarman", ["foo","bar"]
