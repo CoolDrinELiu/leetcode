@@ -1,3 +1,4 @@
+# brute force
 def find_substring(s, words)
   return [] if words.empty? || s.nil?
   words = words.sort
@@ -30,6 +31,7 @@ def find_substring(s, words)
   result
 end
 
+# Sliding window
 def find_substring(s, words)
   return [] if words.empty?
   word_len = words.first.length
@@ -42,7 +44,7 @@ def find_substring(s, words)
     (0...words_num).all? do |j|
       substr = s[i + j * word_len, word_len]
       counter[substr] += 1
-      counter[substr] <= word_tally[substr]
+      counter[substr] <= word_tally[substr] && counter[substr] > 0
     end
   end
 end
