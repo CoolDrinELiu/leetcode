@@ -36,13 +36,13 @@ def find_substring(s, words)
   words_num = words.length
   word_tally = Hash.new(0)
   words.each { |w| word_tally[w] += 1 }
-  binding.pry
   (0..(s.length - word_len * words_num)).select do |i|
     counter = Hash.new(0)
     (0...words_num).all? do |j|
       substr = s[i + j * word_len, word_len]
       counter[substr] += 1
       counter[substr] <= word_tally[substr]
+      binding.pry
     end
   end
 end
