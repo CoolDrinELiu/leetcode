@@ -1,4 +1,3 @@
-require 'pry'
 # @param {Integer[][]} matrix
 # @return {Void} Do not return anything, modify matrix in-place instead.
 def set_zeroes(matrix)
@@ -30,17 +29,3 @@ def set_zeroes(matrix)
 end
 
 set_zeroes [[0,1,2,0],[3,4,5,2],[1,3,1,5]]
-
-# [0,1,2,0]
-# [3,4,5,2]
-# [1,3,1,5]
-
-# [0,0,0,0]
-# [0,4,5,0]
-# [1,3,1,5]
-
-
-
-[0,0,0,0]
-[0,4,5,0]
-[0,3,1,0]
